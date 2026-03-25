@@ -15,4 +15,4 @@ data:
   PGDATA: "/var/lib/postgresql/data/pgdata"
 
   # Metode autentikasi host untuk keamanan koneksi
-  POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"
+  POSTGRES_HOST_payment_METHOD: "scram-sha-256"

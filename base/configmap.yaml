@@ -1,4 +1,4 @@
-# payment-postgres/configmap.yaml
+# PostgreSQL configuration for payment-service database
 
 apiVersion: v1
 kind: ConfigMap

@@ -1,4 +1,4 @@
-# PostgreSQL StatefulSet for payment-service.
+# PostgreSQL StatefulSet for payment-service database
 
 apiVersion: apps/v1
 kind: StatefulSet
@@ -22,12 +22,12 @@ spec:
         app.kubernetes.io/name: payment-postgres
         app.kubernetes.io/component: database
     spec:
-      # securityContext:
-      #   runAsUser: 999 # User postgres di dalam official image
-      #   runAsGroup: 999
-      #   fsGroup: 999 # Memastikan volume dapat ditulis oleh user postgres
-      #   runAsNonRoot: true
-      # terminationGracePeriodSeconds: 60
+      securityContext:
+        runAsUser: 999
+        runAsGroup: 999
+        fsGroup: 999
+        runAsNonRoot: true
+      terminationGracePeriodSeconds: 60
       containers:
         - name: postgres
           image: postgres:16-alpine
